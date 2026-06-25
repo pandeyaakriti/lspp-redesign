@@ -5,7 +5,6 @@ const Navbar: React.FC = () => {
 
 
   const navLinks = [
-    { label: 'About', href: '#about' },
     { label: 'Perks', href: '#perks' },
     { label: 'Partners', href: '#partners' },
     { label: 'Mentors', href: '#mentors'},
