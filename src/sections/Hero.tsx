@@ -126,14 +126,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Bottom fade into next section */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
-        style={{
-          background: 'linear-gradient(to bottom, transparent, #0D1117)',
-        }}
-        aria-hidden="true"
-      />
     </section>
   );
 };

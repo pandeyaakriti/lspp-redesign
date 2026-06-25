@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './layouts/Navbar';
 import Hero from './sections/Hero';
 import Perks from './sections/Perks';
+import Partners from './sections/Partners';
 
 const App: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Perks />
+        <Partners />
         {/* <Partners />
         <Mentors />
         <Resources />
