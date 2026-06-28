@@ -4,6 +4,10 @@ import Hero from './sections/Hero';
 import Perks from './sections/Perks';
 import Partners from './sections/Partners';
 import Stats from './sections/Stats';
+import Mentors from './sections/Mentors';
+import Resources from './sections/Resources';
+import Faq from './sections/Faq';
+import Highlights from './sections/Highlights';
 const App: React.FC = () => {
   return (
     <div className="font-sans antialiased">
@@ -13,10 +17,10 @@ const App: React.FC = () => {
         <Perks />
         <Partners />
         <Stats />
-        {/* <Partners />
         <Mentors />
         <Resources />
-        <FAQ /> */}
+        <Highlights />
+        <Faq />
       </main>
     </div>
   );

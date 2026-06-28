@@ -69,7 +69,7 @@ const Stats: React.FC = () => {
   return (
     <section ref={sectionRef} className="bg-[#169948] text-white py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="font-leapfrog text-white text-4xl lg:text-5xl tracking-tight leading-[1.05] mb-3">
+        <h2 className="font-leapfrog text-white text-4xl lg:text-5xl tracking-tight leading-[1.05] mb-12">
             Building it. Bit by Bit
         </h2>
 
