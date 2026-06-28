@@ -1,29 +1,75 @@
-# Leapfrog Student Partnership Program (LSPP) – Web Assignment
+# LSPP Redesign
 
-A modern, highly interactive landing page crafted for the Leapfrog Student Partnership Program (LSPP). This project has been fully re-engineered from official website.
+A modern, responsive, and interactive redesign of the **Leapfrog Student Partnership Program (LSPP)** landing page.
 
-## The project is optimized for zero-downtime deployment on Vercel.
-Production URL: https://lspp-redesign.vercel.app
+This project was developed as part of the **Leapfrog Student Partnership Program Web Assignment**. The interface has been carefully recreated and enhanced from the official LSPP website while maintaining a strong focus on clean UI, responsiveness, smooth interactions, and performance.
 
-## Built with: 
--Framework: React 18+ (TypeScript)
--Styling Framework: Tailwind CSS v4
--Build System: Vite
--Hosting Platform: Vercel
+## Live Demo
 
-## Local Development Setup 
-1. Clone the repository:
-   Bash
-   git clone https://github.com/pandeyaakrit/lspp-redesign.git
-   cd lspp-redesign
+**Production:** https://lspp-redesign.vercel.app
 
-2. Install project dependencies:
-   Bash
-   npm install
+---
 
-3. Start the local Vite development server:
-   Bash
-   npm run dev
+## Tech Stack
+
+- **Framework:** React 18 + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS v4
+- **Deployment:** Vercel
+
+---
+
+## Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/pandeyaakriti/lspp-redesign.git
+cd lspp-redesign
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+---
+
+## Deployment
+
+The project is configured for seamless deployment on **Vercel**.
+
+---
 
 ## License
-This project is prepared strictly as an assignment submission for the Leapfrog Technology Student Partnership Program. All rights reserved to Leapfrog Technology Inc. 
+
+This project was created solely as a submission for the **Leapfrog Student Partnership Program (LSPP) Web Assignment**.
+
+The original design, branding, and related assets belong to **Leapfrog Technology Inc.** This repository is intended for educational and evaluation purposes only.
