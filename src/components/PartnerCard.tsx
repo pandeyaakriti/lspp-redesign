@@ -10,7 +10,7 @@ export interface Partner {
 
 const PartnerCard: React.FC<{ partner: Partner }> = ({ partner }) => {
   return (
-    <div className="group relative overflow-hidden rounded-[20px] border-[1.5px] border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1.5 hover:border-leapfrog-green hover:shadow-[0_20px_52px_rgba(46,125,50,0.13)]">
+    <div className="group relative overflow-hidden rounded-[20px] border-[1.5px] border-slate-200 bg-[#E6EDFB] transition-all duration-300 hover:-translate-y-1.5 hover:border-leapfrog-green hover:shadow-[0_20px_52px_rgba(46,125,50,0.13)]">
       <div className="relative aspect-3/4 w-full overflow-hidden bg-slate-100"> 
         <img
           src={partner.image}

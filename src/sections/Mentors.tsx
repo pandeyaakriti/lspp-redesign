@@ -17,7 +17,7 @@ const mentorsData: Mentor[] = [
 
 const MentorCard: React.FC<{ mentor: Mentor }> = ({ mentor }) => {
   return (
-    <div className="group relative bg-white border border-slate-100 rounded-3xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-out flex flex-col h-full">
+    <div className="group relative bg-[#E7F5ED] border border-slate-100 rounded-3xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-out flex flex-col h-full">
      
       <div className="relative aspect-square w-full rounded-2xl overflow-hidden mb-5 bg-slate-50">
         <img

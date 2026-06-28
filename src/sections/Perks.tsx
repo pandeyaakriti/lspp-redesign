@@ -7,7 +7,6 @@ interface Perk {
   bullets: string[];
   styles: {
     bg: string;
-    border: string;
     text: string;
     bulletIcon: string;
   };
@@ -19,10 +18,9 @@ const perks: Perk[] = [
     title: 'Lead & Empower',
     tagline: 'Become the person your campus looks up to for tech guidance.',
     styles: {
-      bg: 'bg-[#FFF8E6]', 
-      border: 'hover:border-[#eab308]/40 hover:shadow-[0_20px_40px_rgba(234,179,8,0.08)',
-      text: 'text-[#FFB004]',
-      bulletIcon: 'text-[#d97706]',
+      bg: 'bg-[#FCE9E9]', 
+      text: 'text-[#e69f9f]',
+      bulletIcon: 'text-[#000000]',
     },
     bullets: [
       'Mentorship with Leapfrog experts',
@@ -36,7 +34,6 @@ const perks: Perk[] = [
     tagline: 'Step into professional environments before you graduate.',
     styles: {
       bg: 'bg-[#FFF8E6]', 
-      border: 'hover:border-[#eab308]/40 hover:shadow-[0_20px_40px_rgba(234,179,8,0.08)',
       text: 'text-[#FFB004]',
       bulletIcon: 'text-[#d97706]',
     },
@@ -51,10 +48,9 @@ const perks: Perk[] = [
     title: 'Rewards Worth It',
     tagline: 'Tangible recognition for real work and milestones.',
     styles: {
-      bg: 'bg-[#FFF8E6]', 
-      border: 'hover:border-[#eab308]/40 hover:shadow-[0_20px_40px_rgba(234,179,8,0.08)',
-      text: 'text-[#FFB004]',
-      bulletIcon: 'text-[#d97706]',
+      bg: 'bg-[#E6EDFB]', 
+      text: 'text-[#4276DF]',
+      bulletIcon: 'text-[#000000]',
     },
     bullets: [
       'Curated training & resources',
@@ -67,10 +63,9 @@ const perks: Perk[] = [
     title: 'Grow All-Round',
     tagline: 'Technical depth plus the essential executive soft skills.',
     styles: {
-      bg: 'bg-[#FFF8E6]', 
-      border: 'hover:border-[#eab308]/40 hover:shadow-[0_20px_40px_rgba(234,179,8,0.08)]',
-      text: 'text-[#FFB004]',
-      bulletIcon: 'text-[#d97706]',
+      bg: 'bg-[#E7F5ED]', 
+      text: 'text-[#8BD2A7]',
+      bulletIcon: 'text-[#000000]',
     },
     bullets: [
       'Guidance from senior engineers',
@@ -82,7 +77,7 @@ const perks: Perk[] = [
 
 const PerkCard: React.FC<{ perk: Perk }> = ({ perk }) => {
   return (
-    <div className={`group relative border border-transparent rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between ${perk.styles.bg} ${perk.styles.border}`}>
+    <div className={`group relative border border-transparent rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between ${perk.styles.bg} `}>
       <div>
         {/* Card Header Slot */}
         <div className="flex items-center justify-between mb-5">
@@ -92,7 +87,7 @@ const PerkCard: React.FC<{ perk: Perk }> = ({ perk }) => {
         </div>
 
         {/* Text Area */}
-        <h3 className={`text-base font-bold tracking-tight mb-2 ${perk.styles.text}`}>
+        <h3 className={`text-xl font-bold tracking-tight mb-2 ${perk.styles.text}`}>
           {perk.title}
         </h3>
         <p className="text-xs text-slate-600 leading-relaxed mb-5 font-medium">
@@ -137,8 +132,8 @@ const Perks: React.FC = () => {
         </h2>
         </div>
 
-        {/* 4-Column Row Grid Configuration */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+        {/* 2-Column Row Grid Configuration */}
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8">
           {perks.map((perk) => (
             <PerkCard key={perk.num} perk={perk} />
           ))}
