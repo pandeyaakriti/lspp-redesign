@@ -1,6 +1,6 @@
 import React from 'react';
 import heroImage from '../assets/hero_image.webp';
-
+import lspplogo from '../assets/student-partnership-logo.svg';
 const stats = [
   { value: '500+', label: 'Student Partners' },
   { value: '120+', label: 'KSS Sessions' },
@@ -35,9 +35,9 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Copy */}
           <div className="flex flex-col gap-6">
-    
             {/* Headline — the signature typographic split */}
             <div className="space-y-1">
+              <img src={lspplogo} alt="LSPP Logo" className="w-45 h-auto mb-4" />
               <h1 className="font-leapfrog font-black text-leapfrog-green leading-[1.05] text-5xl lg:text-7xl tracking-tight">
                 Learn.
                 <br />

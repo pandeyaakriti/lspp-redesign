@@ -8,6 +8,7 @@ import Mentors from './sections/Mentors';
 import Resources from './sections/Resources';
 import Faq from './sections/Faq';
 import Highlights from './sections/Highlights';
+import Footer from './layouts/Footer';
 const App: React.FC = () => {
   return (
     <div className="font-sans antialiased">
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <Highlights />
         <Faq />
       </main>
+      <Footer />
     </div>
   );
 };

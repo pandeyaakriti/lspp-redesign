@@ -2,7 +2,6 @@ import React from 'react';
 
 interface Perk {
   num: string;
-  icon: React.JSX.Element;
   title: string;
   tagline: string;
   bullets: string[];
@@ -10,7 +9,6 @@ interface Perk {
     bg: string;
     border: string;
     text: string;
-    iconBg: string;
     bulletIcon: string;
   };
 }
@@ -18,18 +16,12 @@ interface Perk {
 const perks: Perk[] = [
   {
     num: '01',
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z" />
-      </svg>
-    ),
     title: 'Lead & Empower',
     tagline: 'Become the person your campus looks up to for tech guidance.',
     styles: {
       bg: 'bg-[#FFF8E6]', 
       border: 'hover:border-[#eab308]/40 hover:shadow-[0_20px_40px_rgba(234,179,8,0.08)',
-      text: 'text-[#713f12]',
-      iconBg: 'bg-[#fef08a] text-[#ca8a04]',
+      text: 'text-[#FFB004]',
       bulletIcon: 'text-[#d97706]',
     },
     bullets: [
@@ -40,19 +32,12 @@ const perks: Perk[] = [
   },
   {
     num: '02',
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="7" width="20" height="14" rx="2" />
-        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
-      </svg>
-    ),
     title: 'Go Pro Early',
     tagline: 'Step into professional environments before you graduate.',
     styles: {
       bg: 'bg-[#FFF8E6]', 
       border: 'hover:border-[#eab308]/40 hover:shadow-[0_20px_40px_rgba(234,179,8,0.08)',
-     text: 'text-[#713f12]',
-      iconBg: 'bg-[#fef08a] text-[#ca8a04]',
+      text: 'text-[#FFB004]',
       bulletIcon: 'text-[#d97706]',
     },
     bullets: [
@@ -63,18 +48,12 @@ const perks: Perk[] = [
   },
   {
     num: '03',
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M8 21h8M12 17v4M7 4l5 9 5-9M4 9h16" />
-      </svg>
-    ),
     title: 'Rewards Worth It',
     tagline: 'Tangible recognition for real work and milestones.',
     styles: {
       bg: 'bg-[#FFF8E6]', 
       border: 'hover:border-[#eab308]/40 hover:shadow-[0_20px_40px_rgba(234,179,8,0.08)',
-      text: 'text-[#713f12]',
-      iconBg: 'bg-[#fef08a] text-[#ca8a04]',
+      text: 'text-[#FFB004]',
       bulletIcon: 'text-[#d97706]',
     },
     bullets: [
@@ -85,18 +64,12 @@ const perks: Perk[] = [
   },
   {
     num: '04',
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 20V10M18 20V4M6 20v-4" />
-      </svg>
-    ),
     title: 'Grow All-Round',
     tagline: 'Technical depth plus the essential executive soft skills.',
     styles: {
       bg: 'bg-[#FFF8E6]', 
       border: 'hover:border-[#eab308]/40 hover:shadow-[0_20px_40px_rgba(234,179,8,0.08)]',
-      text: 'text-[#713f12]',
-      iconBg: 'bg-[#fef08a] text-[#ca8a04]',
+      text: 'text-[#FFB004]',
       bulletIcon: 'text-[#d97706]',
     },
     bullets: [
@@ -113,9 +86,6 @@ const PerkCard: React.FC<{ perk: Perk }> = ({ perk }) => {
       <div>
         {/* Card Header Slot */}
         <div className="flex items-center justify-between mb-5">
-          <div className={`w-9 h-9 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-105 ${perk.styles.iconBg}`}>
-            {perk.icon}
-          </div>
           <span className={`text-xs font-mono font-bold tracking-wider opacity-40 ${perk.styles.text}`}>
             //{perk.num}
           </span>
@@ -161,7 +131,7 @@ const Perks: React.FC = () => {
 
         <h2 className="font-leapfrog font-black text-slate-900 text-3xl lg:text-5xl tracking-tight leading-[1.1] mb-3">
             What are the{" "}
-            <span className="text-transparent bg-clip-text bg-leapfrog-green">
+            <span className="text-transparent bg-clip-text bg-leapfrog-green to-emerald-600">
             Perks ?
             </span>
         </h2>
