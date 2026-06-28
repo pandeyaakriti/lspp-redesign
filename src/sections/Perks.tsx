@@ -159,9 +159,9 @@ const Perks: React.FC = () => {
         <div className="flex items-center justify-center gap-2 mb-3">
         </div>
 
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
+        <h2 className="font-leapfrog font-black text-slate-900 text-3xl lg:text-5xl tracking-tight leading-[1.1] mb-3">
             What are the{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-leapfrog-green to-emerald-600">
+            <span className="text-transparent bg-clip-text bg-leapfrog-green">
             Perks ?
             </span>
         </h2>

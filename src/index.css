@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700;900&display=swap');
 @import "tailwindcss";
 
 @theme {
   --color-leapfrog-green: #2E7D32;
   --color-leapfrog-dark: #0D1117;
-
   --font-sans: "Space Grotesk", "Inter", system-ui, sans-serif;
+
+  --font-leapfrog: "Arvo", serif;
+}
+
+@layer utilities {
+  .section-header {
+    @apply font-leapfrog font-bold tracking-tight leading-[1.05] text-4xl lg:text-5xl mb-3;
+  }
 }

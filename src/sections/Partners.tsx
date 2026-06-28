@@ -1,109 +1,148 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PartnerCard, { type Partner } from '../components/PartnerCard';
 import aakritiImg from '../assets/aakriti.jpeg';
-import partnerImg from '../assets/mj.jpg';
+import mj from '../assets/mj.jpg';
 
-const partners: Partner[] = [
-  {
-    name: 'Aakriti Pandey',
-    university: 'Kathmandu University',
-    image: aakritiImg,
-    description: 'Led with curiosity, turned campus momentum into practical impact, and helped the cohort stay connected.',
-  },
-  {
-    name: 'Micheal Jackson',
-    university: 'Kathmandu University',
-    image: partnerImg,
-    description: 'Built consistent peer support habits and helped others move from learning theory to project work.',
-  },
-   {
-    name: 'Micheal Jackson',
-    university: 'Kathmandu University',
-    image: partnerImg,
-    description: 'Focused on collaboration, communication, and making the program feel welcoming to new members.',
-  },
- {
-    name: 'Micheal Jackson',
-    university: 'Kathmandu University',
-    image: partnerImg,
-    description: 'Translated mentorship into steady progress by keeping small goals visible and achievable.',
-  },
- {
-    name: 'Micheal Jackson',
-    university: 'Kathmandu University',
-    image: partnerImg,
-    description: 'Balanced technical learning with campus leadership and built a strong feedback loop for peers.',
-  },
- {
-    name: 'Micheal Jackson',
-    university: 'Kathmandu University',
-    image: partnerImg,
-    description: 'Helped shape a stronger student network through accountability, mentorship, and practical execution.',
-  },
- {
-    name: 'Micheal Jackson',
-    university: 'Kathmandu University',
-    image: partnerImg,
-    description: 'Brought structure to the cohort experience and made room for confident, independent growth.',
-  },
+type YearKey = '2023' | '2024' | '2025' | '2026';
 
-];
+const partnersByYear: Record<YearKey, Partner[]> = {
+  
+  '2023': [
+    //2023 partners here
+  ],
+  '2024': [
+    // 2024 partners here
+  ],
+  '2025': [
+    // 2025 partners here
+  ],
+  '2026': [
+    {
+      name: 'Aakriti Pandey',
+      university: 'Kathmandu University',
+      batch: 'LSPP 2026',
+      description:
+        'A Computer Engineering student at KU with a passion for AI, product design, and entrepreneurship. Beyond coding and building ideas, she enjoys writing poetry, exploring philosophy and engaging in long tea-fueled conversations. An adventure seeker at heart, recharging through hiking and chasing adrenaline.',
+      image: aakritiImg
+    },
+    {
+      name: 'Arekh Shrestha',
+      university: 'KU School of Engineering',
+      batch: 'LSPP 2026',
+      description:
+        'A Computer Engineering student passionate about design and visual storytelling, focused on building visually engaging and functional digital products. Has developed platforms like wePay, Lekha, and Sangam, and enjoy blending creativity with technology to craft meaningful user experiences and support impactful ideas.',
+      image: mj, 
+    },
+    {
+      name: 'Nirika Lamichhane',
+      university: 'IOE, Thapathali Campus',
+      batch: 'LSPP 2026',
+      description:
+        'Focused on collaboration and communication, making the program feel welcoming to every new member.',
+      image: mj,
+    },
+    {
+      name: 'Sworna Dhan Tuladhar',
+      university: 'Islington College',
+      batch: 'LSPP 2026',
+      description:
+        'Translated mentorship into steady progress by keeping small goals visible and achievable for peers.',
+      image: mj,
+    },
+  ],
+};
 
+const YEARS: YearKey[] = [ '2023', '2024', '2025', '2026'];
+
+// ─── Section ──────────────────────────────────────────────────────────────────
 const Partners: React.FC = () => {
+  const [activeYear, setActiveYear] = useState<YearKey>('2026');
+  const partners = partnersByYear[activeYear];
+
   return (
     <section id="partners" className="relative overflow-hidden bg-slate-50/50 py-24 lg:py-32 border-t border-b border-slate-100">
-      {/* Green glow — bottom-left this time for variety */}
+      {/* Green glow*/}
       <div
         className="absolute -left-32 bottom-0 w-96 h-96 rounded-full opacity-[0.08] pointer-events-none"
         style={{ background: 'radial-gradient(circle,#2FCC71 0%,transparent 70%)' }}
         aria-hidden="true"
       />
+      {/* Glows */}
+      <div
+        className="absolute -left-24 -bottom-16 w-96 h-96 rounded-full opacity-[0.07] pointer-events-none"
+        style={{ background: 'radial-gradient(circle,#2FCC71 0%,transparent 70%)' }}
+        aria-hidden="true"
+      />
+      <div
+        className="absolute -right-20 top-16 w-64 h-64 rounded-full opacity-[0.05] pointer-events-none"
+        style={{ background: 'radial-gradient(circle,#2FCC71 0%,transparent 70%)' }}
+        aria-hidden="true"
+      />
 
-      <div className="absolute top-0 left-1/4 w-150 h-150 bg-emerald-500/5 rounded-full filter blur-[120px] pointer-events-none transform -translate-y-1/2" aria-hidden="true" />
-      <div className="absolute bottom-0 right-1/4 w-100 h-100 bg-teal-500/5 rounded-full filter blur-[100px] pointer-events-none transform translate-y-1/2" aria-hidden="true" />
+      
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        {/* ── Header row ─────────────────────────────────── */}
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="mb-12 flex flex-col items-center gap-5">
+          
         {/* Section header */}
-        <div className="mb-12 lg:mb-16 text-center max-w-2xl mx-auto">
+        <div className="lg:mb-4 text-center max-w-2xl mx-auto">
           <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-leapfrog-green" />
-            <span className="text-[10px] font-bold tracking-[.18em] uppercase text-leapfrog-green">
-              Meet the partners
-            </span>
           </div>
-          <h2 className="font-black text-slate-900 text-4xl lg:text-5xl tracking-tight leading-[1.05] mb-3">
-            Real students.{' '}
-            <span
-              style={{ WebkitTextStroke: '1.5px #2E7D32', color: 'transparent' }}
-            >
-              Real impact.
-            </span>
-          </h2>
-          <p className="text-sm text-slate-400 max-w-md mx-auto leading-relaxed">
-            The faces behind the program — students who led, learned, and grew. Hover to hear their story.
-          </p>
+          <h2 className="font-leapfrog font-black text-slate-900 text-3xl lg:text-5xl tracking-tight leading-[1.05] mb-3">
+        Real students.{' '}
+        <span className="text-transparent bg-clip-text bg-leapfrog-green">
+          Real impact.
+        </span>
+      </h2>
         </div>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-6">
-          {partners.map((p) => (
-            <PartnerCard key={p.name} partner={p} />
-          ))}
-        </div>
-
-        {/* CTA strip */}
-        <div className="mt-12 lg:mt-16 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between rounded-3xl border border-slate-200 bg-white/90 backdrop-blur-sm px-6 py-5 shadow-[0_18px_50px_rgba(13,17,23,0.06)]">
-          <p className="text-sm text-slate-500 max-w-sm leading-relaxed">
-            Interested in becoming the next Leapfrog Student Partner?{' '}
-            <span className="text-leapfrog-green font-semibold">Applications are open for 2026.</span>
-          </p>
-          <a
-            href="#apply"
-            className="shrink-0 px-6 py-3 rounded-full bg-leapfrog-green text-white text-sm font-bold hover:bg-green-700 transition-colors shadow-sm"
+          {/* Year filter pill tabs */}
+          <div
+            className="flex items-center gap-1.5 rounded-full justify-center border border-slate-200 bg-slate-50 p-1 self-start sm:self-auto"
+            role="tablist"
+            aria-label="Filter partners by year"
           >
-            Apply for 2026
-          </a>
+            {YEARS.map((year) => (
+              <button
+                key={year}
+                role="tab"
+                aria-selected={activeYear === year}
+                onClick={() => setActiveYear(year)}
+                className={`rounded-full px-4 py-1.5 text-[11px] font-semibold transition-all duration-200
+                  ${
+                    activeYear === year
+                      ? 'bg-white text-slate-800 border border-leapfrog-green shadow-sm'
+                      : 'text-slate-400 hover:text-slate-600 border border-transparent'
+                  }`}
+              >
+                {year}
+              </button>
+            ))}
+          </div>
         </div>
+
+        {/* ── Partner grid ───────────────────────────────── */}
+        {partners.length > 0 ? (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-5">
+            {partners.map((p) => (
+              <PartnerCard key={`${p.name}-${activeYear}`} partner={p} />
+            ))}
+          </div>
+        ) : (
+          <div className="flex flex-col items-center justify-center py-24 text-center">
+            <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-4">
+              <span className="text-slate-400 text-xl">·</span>
+            </div>
+            <p className="text-sm font-semibold text-slate-500">
+              Partners for {activeYear} coming soon
+            </p>
+            <p className="text-xs text-slate-400 mt-1">
+              Check back once the cohort is announced.
+            </p>
+          </div>
+        )}
+
       </div>
     </section>
   );

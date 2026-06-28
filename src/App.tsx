@@ -3,7 +3,7 @@ import Navbar from './layouts/Navbar';
 import Hero from './sections/Hero';
 import Perks from './sections/Perks';
 import Partners from './sections/Partners';
-
+import Stats from './sections/Stats';
 const App: React.FC = () => {
   return (
     <div className="font-sans antialiased">
@@ -12,6 +12,7 @@ const App: React.FC = () => {
         <Hero />
         <Perks />
         <Partners />
+        <Stats />
         {/* <Partners />
         <Mentors />
         <Resources />

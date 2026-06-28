@@ -38,13 +38,13 @@ const Hero: React.FC = () => {
     
             {/* Headline — the signature typographic split */}
             <div className="space-y-1">
-              <h1 className="font-sans font-black text-leapfrog-green leading-[1.05] text-5xl lg:text-7xl tracking-tight">
+              <h1 className="font-leapfrog font-black text-leapfrog-green leading-[1.05] text-5xl lg:text-7xl tracking-tight">
                 Learn.
                 <br />
                 Lead.
               </h1>
               <h1
-                className="font-sans font-black leading-[1.05] text-5xl lg:text-7xl tracking-tight"
+                className="font-leapfrog font-black leading-[1.05] text-5xl lg:text-7xl tracking-tight"
                 style={{
                   WebkitTextStroke: '2px #2E7D32',
                   color: 'transparent',
