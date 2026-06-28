@@ -1,16 +1,29 @@
-# React + Vite
+# Leapfrog Student Partnership Program (LSPP) – Web Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, highly interactive landing page crafted for the Leapfrog Student Partnership Program (LSPP). This project has been fully re-engineered from official website.
 
-Currently, two official plugins are available:
+## The project is optimized for zero-downtime deployment on Vercel.
+Production URL: https://lspp-redesign.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Built with: 
+-Framework: React 18+ (TypeScript)
+-Styling Framework: Tailwind CSS v4
+-Build System: Vite
+-Hosting Platform: Vercel
 
-## React Compiler
+## Local Development Setup 
+1. Clone the repository:
+   Bash
+   git clone https://github.com/pandeyaakrit/lspp-redesign.git
+   cd lspp-redesign
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Install project dependencies:
+   Bash
+   npm install
 
-## Expanding the ESLint configuration
+3. Start the local Vite development server:
+   Bash
+   npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## License
+This project is prepared strictly as an assignment submission for the Leapfrog Technology Student Partnership Program. All rights reserved to Leapfrog Technology Inc. 
