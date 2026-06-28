@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
           
           {/* Copyright & Legal links */}
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left">
-            <span>&copy; {new Date().getFullYear()} Leapfrog Technology Inc. All rights reserved.</span>
+            <span>&copy; {new Date().getFullYear()} Leapfrog Technology Inc. Redesigned by Aakriti Pandey</span>
             <div className="flex items-center gap-4">
               <a href="#" className="hover:text-emerald-500 transition-colors duration-200">Privacy Policy</a>
               <span className="text-white/10 text-xs">|</span>
